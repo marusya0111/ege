@@ -142,3 +142,13 @@ for i in range(2,len(data)):
 
     max_len = max( max_len,current_len)
     print(max_len)
+
+
+
+
+
+
+
+
+
+
