@@ -1,0 +1,40 @@
+
+#2422 Текстовый файл состоит из символов, обозначающих десятичные цифры
+# и заглавные буквы латинского алфавита. Определите в прилагаемом
+# файле максимальное количество идущих подряд символов,
+# которые могут представлять запись чётного числа в двенадцатеричной
+# системе счисления. В этой записи отсутствуют незначащие (ведущие) нули.
+
+# from string import digits,ascii_uppercase
+# alph = digits + ascii_uppercase
+# data = "XX02345A1XX"
+# even = alph[:12:2]
+# good= alph[:12]
+# bad = alph[12:]
+# cnt = max_len = 0
+
+# with open("../files/2422.txt") as file:
+#     data = file.readline()
+
+# right = left = 0
+# for right in range(len(data)):
+#     if data[right] in bad:
+#         left = right +1
+#         continue
+#     while data[left] == "0":
+#         left+=1
+#     if data[right] in even:
+#         max_len = max(max_len,right-left +1)
+# print(max_len)
+#5
+
+
+
+
+
+
+
+
+
+
+
