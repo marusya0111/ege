@@ -28,12 +28,38 @@
 # print(max_len)
 #5
 
+# Текстовый файл состоит из десятичных цифр и
+# заглавных букв латинского алфавита.
+# Onределите в этом файле последовательность
+# идущих подряд символов, представляющих собой
+# запись максимального кратного пяти 15-ричного числа.
+# В ответе запишите индекс (номер) последнего символа
+# (последней значащей цифры), которой заканчивается
+# запись этого числа в прилагаемом файле.
+# Нумерация символов в текстовом файле начинается с нуля.
 
-
-
-
-
-
+# from string import digits,ascii_uppercase
+# alph = digits+ascii_uppercase
+# good = alph[:15]#0123456789ABCDE
+# bad = alph[15:]
+# even = good[::5]
+# data = "LOCIZQT00795CCAELL"
+#
+# left = 0
+# substring = 0
+# for right in range(len(data)):
+#     if data[right] in bad:
+#         left = right+1
+#     else:
+#         continue
+#     while data[left] == "0":
+#         left+=1
+#     if data[right] in even:
+#         substring = data[left:right+1]
+#         if substring:
+#             substring.append((substring,right))
+# ans = max(substring, key = lambda x : int(x[0],15))
+# print(ans)
 
 
 

@@ -40,3 +40,39 @@
 #         else:
 #             cnt = 0
 #     print(max_len)
+
+# Текстовый файл состоит из десятичных цифр и
+# заглавных букв латинского алфавита.
+# Onределите в этом файле последовательность
+# идущих подряд символов, представляющих собой
+# запись максимального кратного пяти 15-ричного числа.
+# В ответе запишите индекс (номер) последнего символа
+# (последней значащей цифры), которой заканчивается
+# запись этого числа в прилагаемом файле.
+# Нумерация символов в текстовом файле начинается с нуля.
+
+from string import digits,ascii_uppercase
+alph = digits+ascii_uppercase
+good = alph[:15]#0123456789ABCDE
+bad = alph[15:]
+even = good[::5]
+
+data = "LOCIZQT00795CCAELL"
+cnt = 0
+max_len = 0
+index = 0
+string = ""
+
+for i in range(len(data)):
+    if string == "" and data[i] == "0":
+        continue
+    if data[i] in good:
+        string+= data[i]
+    else:
+        string = ""
+    if data[i] in even and max_len < int(string,15):
+        max_len = int(string,15)
+        index = i
+print(good)
+print(data[index - max_len +1 : index])
+#14
